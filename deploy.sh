@@ -1,9 +1,4 @@
 #!/bin/bash
-
-read -e -p "Enter your commit message: " commit_message
-env -i git add --all
-env -i git commit -m "$commit_message"
-env -i git checkout master
 read -e -p "Branch to merge: " branch
 env -i git merge $branch
 env -i git push -u origin master
